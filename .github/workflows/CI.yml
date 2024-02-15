@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  - push
+
+jobs:
+  build-linux-frontend-android:
+    name: (Linux) Build Android Frontend
+    runs-on: ubuntu-22.04
+    steps:
+      # beware about using v2 because https://github.com/actions/checkout/issues/100
+      - uses: actions/checkout@v1
+        with:
+          submodules: recursive
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Workaround possible sudo-related dotnet problem
+        run: dotnet --help
+
+      - name: Restore workloads
+        # TODO: maybe try to sync this step with previous one via e.g. --sdk-version 7.0.9
+        #       (but not sure if this only worked with 'dotnet workload install', maybe it doesn't
+        #       work with 'dotnet workload restore')
+        run: sudo dotnet workload restore
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Build Frontend (Android)
+        run: |
+          sudo dotnet build SampleMauiAppCPM.csproj \
+            --framework net8.0-android \
+            --configuration Debug \
+            -p:AndroidSdkDirectory=/usr/local/lib/android/sdk \
+            -p:AndroidOnly=true
