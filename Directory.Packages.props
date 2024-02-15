@@ -7,8 +7,8 @@
         <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" Condition="'$(Configuration)' == 'Debug'" />
         <PackageVersion Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
         <PackageVersion Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-        <PackageVersion Include="Sentry.Maui" Version="3.30.0" />
-        <PackageVersion Include="ZXing.Net.Maui" Version="0.2.0-preview.2" />
-        <PackageVersion Include="ZXing.Net.Maui.Controls" Version="0.2.0-preview.2" />
+        <PackageVersion Include="Sentry.Maui" Version="4.1.1" />
+        <PackageVersion Include="ZXing.Net.Maui" Version="0.4.0" />
+        <PackageVersion Include="ZXing.Net.Maui.Controls" Version="0.4.0" />
     </ItemGroup>
 </Project>
