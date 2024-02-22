@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{CC95CFEF-1F87-45F5-B925-270FCB656BC0}") = "SampleMauiAppCPM", "SampleMauiAppCPM.csproj", "{89196F0E-1244-40B5-97BB-6B0C76BB2743}"
+Project("{CC95CFEF-1F87-45F5-B925-270FCB656BC0}") = "SampleMauiAppCPM", "src\SampleMauiAppCPM\SampleMauiAppCPM.csproj", "{89196F0E-1244-40B5-97BB-6B0C76BB2743}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{94549403-FC57-4B6A-8AED-010EB4F45DF1}"
 	ProjectSection(SolutionItems) = preProject

@@ -38,7 +38,7 @@ jobs:
 
       - name: Build Frontend (Android)
         run: |
-          sudo dotnet build SampleMauiAppCPM.csproj \
+          sudo dotnet build src/SampleMauiAppCPM/SampleMauiAppCPM.csproj \
             --framework net8.0-android \
             --configuration Debug \
             -p:AndroidSdkDirectory=/usr/local/lib/android/sdk \
