@@ -21,6 +21,9 @@
         <PackageVersion Include="Npgsql" Version="6.0.3" />
         <PackageVersion Include="SQLProvider" Version="1.2.12" />
         <PackageVersion Include="System.Text.Json" Version="6.0.2" />
+        <PackageVersion Include="Shiny.Hosting.Maui" Version="3.0.0-alpha-0533" />
+        <PackageVersion Include="Shiny.Push.FirebaseMessaging" Version="3.0.0-alpha-0533" />
+        <PackageVersion Include="Shiny.Extensions.Configuration" Version="3.0.0-alpha-0533" />
         
     </ItemGroup>
 </Project>
