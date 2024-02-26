@@ -43,3 +43,9 @@ jobs:
             --configuration Debug \
             -p:AndroidSdkDirectory=/usr/local/lib/android/sdk \
             -p:AndroidOnly=true
+            
+          sudo dotnet build src/Frontend/Frontend.csproj \
+            --framework net8.0-android \
+            --configuration Debug \
+            -p:AndroidSdkDirectory=/usr/local/lib/android/sdk \
+            -p:AndroidOnly=true

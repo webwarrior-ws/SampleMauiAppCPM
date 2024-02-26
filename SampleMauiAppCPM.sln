@@ -20,6 +20,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcClient", "src\GrpcClien
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcService", "src\GrpcService\GrpcService.csproj", "{FBA4AE56-A5D9-4061-8454-F5248B7D9335}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frontend", "src\Frontend\Frontend.csproj", "{26077D4E-5CB4-43CD-8A76-6BC9E7F623D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,12 +54,18 @@ Global
 		{FBA4AE56-A5D9-4061-8454-F5248B7D9335}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBA4AE56-A5D9-4061-8454-F5248B7D9335}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBA4AE56-A5D9-4061-8454-F5248B7D9335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26077D4E-5CB4-43CD-8A76-6BC9E7F623D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26077D4E-5CB4-43CD-8A76-6BC9E7F623D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26077D4E-5CB4-43CD-8A76-6BC9E7F623D1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{26077D4E-5CB4-43CD-8A76-6BC9E7F623D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26077D4E-5CB4-43CD-8A76-6BC9E7F623D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26077D4E-5CB4-43CD-8A76-6BC9E7F623D1}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		        SolutionGuid = {5FD8521C-E4EB-40ED-92CD-405A9B194A4A}
 		SolutionGuid = {0F5DCC97-D134-44B3-A8B2-D43BA1487583}
+		        SolutionGuid = {5FD8521C-E4EB-40ED-92CD-405A9B194A4A}
 	EndGlobalSection
 EndGlobal
