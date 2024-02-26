@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.nodeffect.runintome"
+	android:versionCode="23"
+	android:versionName="0.7.23"
+	>
+
+	<!-- FIXME: explore how to lower this minSDK without causing warnings(as errors) -->
+	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="33" />
+
+	<application
+		android:allowBackup="false"
+		android:icon="@mipmap/appicon"
+		android:roundIcon="@mipmap/appicon_round"
+		android:supportsRtl="true"
+		android:label="RunIntoMe"
+		>
+		<meta-data
+			android:name="com.google.firebase.messaging.default_notification_icon"
+			android:resource="@drawable/push_notifs_icon"
+			/>
+	</application>
+
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-feature android:name="android.hardware.location" android:required="false" />
+	<uses-feature android:name="android.hardware.location.gps" android:required="false" />
+	<uses-feature android:name="android.hardware.location.network" android:required="false" />
+</manifest>

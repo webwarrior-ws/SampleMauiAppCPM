@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <MakeDir Directories="lib" />
+    <Copy
+        Condition="!Exists('lib\Microsoft.Bcl.AsyncInterfaces.dll')"
+        SourceFiles="..\..\packages\microsoft.bcl.asyncinterfaces\6.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll"
+        DestinationFolder="lib"
+    />
+    <Copy
+        Condition="!Exists('lib\Microsoft.Bcl.HashCode.dll')"
+        SourceFiles="..\..\packages\microsoft.bcl.hashcode\1.1.1\lib\netstandard2.0\Microsoft.Bcl.HashCode.dll"
+        DestinationFolder="lib"
+    />
+    <Copy
+        Condition="!Exists('lib\System.Collections.Immutable.dll')"
+        SourceFiles="..\..\packages\system.collections.immutable\6.0.0\lib\netstandard2.0\System.Collections.Immutable.dll"
+        DestinationFolder="lib"
+    />
+    <Copy
+        Condition="!Exists('lib\System.Diagnostics.DiagnosticSource.dll')"
+        SourceFiles="..\..\packages\system.diagnostics.diagnosticsource\6.0.0\lib\netstandard2.0\System.Diagnostics.DiagnosticSource.dll"
+        DestinationFolder="lib"
+    />
+    <Copy
+        Condition="!Exists('lib\System.Memory.dll')"
+        SourceFiles="..\..\packages\system.memory\4.5.4\lib\netstandard2.0\System.Memory.dll"
+        DestinationFolder="lib"
+    />
+    <Copy
+        Condition="!Exists('lib\System.Runtime.CompilerServices.Unsafe.dll')"
+        SourceFiles="..\..\packages\system.runtime.compilerservices.unsafe\6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll"
+        DestinationFolder="lib"
+    />
+    <Copy
+        Condition="!Exists('lib\System.Text.Json.dll')"
+        SourceFiles="..\..\packages\system.text.json\6.0.0\lib\netstandard2.0\System.Text.Json.dll"
+        DestinationFolder="lib"
+    />
+    <Copy
+        Condition="!Exists('lib\System.Threading.Channels.dll')"
+        SourceFiles="..\..\packages\system.threading.channels\6.0.0\lib\netstandard2.0\System.Threading.Channels.dll"
+        DestinationFolder="lib"
+    />
+    <Copy
+        Condition="!Exists('lib\System.Threading.Tasks.Extensions.dll')"
+        SourceFiles="..\..\packages\system.threading.tasks.extensions\4.5.4\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll"
+        DestinationFolder="lib"
+    />
+    <Copy
+        Condition="!Exists('lib\System.ValueTuple.dll')"
+        SourceFiles="..\..\packages\system.valuetuple\4.5.0\lib\netstandard1.0\System.ValueTuple.dll"
+        DestinationFolder="lib"
+    />
+  </Target>
+  
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Constants.fs" />
+    <Compile Include="Access.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql">
+      <GeneratePathProperty></GeneratePathProperty>
+    </PackageReference>
+    <PackageReference Include="SQLProvider">
+      <GeneratePathProperty></GeneratePathProperty>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataModel\DataModel.fsproj" />
+  </ItemGroup>
+</Project>

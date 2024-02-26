@@ -7,8 +7,18 @@
         <PackageVersion Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" Condition="'$(Configuration)' == 'Debug'" />
         <PackageVersion Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
         <PackageVersion Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+        <PackageVersion Include="FirebaseAdmin" Version="2.3.0" />
+        <PackageVersion Include="Google.Protobuf" Version="3.18.0" />
+        <PackageVersion Include="Grpc.AspNetCore" Version="2.40.0" />
+        <PackageVersion Include="Grpc.Net.ClientFactory" Version="2.40.0" />
+        <PackageVersion Include="Grpc.Tools" Version="2.40.0" />
+        <PackageVersion Include="Sentry.AspNetCore.Grpc" Version="3.30.0" />
         <PackageVersion Include="Sentry.Maui" Version="4.1.1" />
         <PackageVersion Include="ZXing.Net.Maui" Version="0.4.0" />
         <PackageVersion Include="ZXing.Net.Maui.Controls" Version="0.4.0" />
+        <PackageVersion Include="Npgsql" Version="6.0.3" />
+        <PackageVersion Include="SQLProvider" Version="1.2.12" />
+        <PackageVersion Include="System.Text.Json" Version="6.0.2" />
+        
     </ItemGroup>
 </Project>

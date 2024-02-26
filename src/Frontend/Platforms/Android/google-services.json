@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "845597556656",
+    "project_id": "runintome-5d8f1",
+    "storage_bucket": "runintome-5d8f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845597556656:android:688b4d75dafca1a5116075",
+        "android_client_info": {
+          "package_name": "com.nodeeffect.runintome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845597556656-boti80keeoqgj9n8qhkv5pve6cocn82v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXPyJ6IJhj5v7pEseVKQDxG65aM7XMq1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845597556656-boti80keeoqgj9n8qhkv5pve6cocn82v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "845597556656-5ecn9p1qvb5mbr6ktkgjribdr70dcpbf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nodeeffect.runintome"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845597556656:android:b3377b0aa79907b3116075",
+        "android_client_info": {
+          "package_name": "com.nodeffect.runintome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845597556656-boti80keeoqgj9n8qhkv5pve6cocn82v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXPyJ6IJhj5v7pEseVKQDxG65aM7XMq1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845597556656-boti80keeoqgj9n8qhkv5pve6cocn82v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "845597556656-5ecn9p1qvb5mbr6ktkgjribdr70dcpbf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.nodeeffect.runintome"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

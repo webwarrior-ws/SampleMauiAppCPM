@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="NotificationIdentifiers.fs" />
+    <Compile Include="Model.fs" />
+    <Compile Include="Marshalling.fs" />
+    <Compile Include="Texts.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json">
+      <GeneratePathProperty></GeneratePathProperty>
+    </PackageReference>
+  </ItemGroup>
+</Project>

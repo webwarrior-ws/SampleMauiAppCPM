@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dataModel="clr-namespace:DataModel;assembly=DataModel"
+    xmlns:models="clr-namespace:Frontend.Models"
+    Title="{x:Static dataModel:Texts.Relationships}"
+    NavigationPage.BackButtonTitle="Back"
+    x:Class="Frontend.RelationshipsPage"
+>
+    <CollectionView
+        x:Name="ListOfFolks"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+    >
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="models:Folk">
+                <Label
+                    VerticalTextAlignment="Center"
+                    Margin="20,10"
+                    FontSize="20"
+                    Text="{Binding Nickname}"
+                >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                            CommandParameter="{Binding .}"
+                            Tapped="ListOfFolksItemSelected"
+                        />
+                    </Label.GestureRecognizers>
+                </Label>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        <CollectionView.EmptyView>
+            <Label
+                x:Name="EmptyViewLabel"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Text="{x:Static dataModel:Texts.Loading}"
+            />
+        </CollectionView.EmptyView>
+    </CollectionView>
+</ContentPage>
