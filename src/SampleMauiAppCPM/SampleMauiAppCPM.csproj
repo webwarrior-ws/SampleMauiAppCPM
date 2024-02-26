@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>net8.0-android</TargetFrameworks>
-        <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('osx'))">$(TargetFrameworks);net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
-        <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0</TargetFrameworks>
-        <!-- <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
-        <TargetFrameworks>$(TargetFrameworks);net8.0</TargetFrameworks>
+        <TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
+        <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041</TargetFrameworks>
+        <TargetFrameworks Condition=" '$(AndroidOnly)' == 'true' ">net8.0-android</TargetFrameworks>
+        <OutputType>Exe</OutputType>
         <OutputType Condition="'$(TargetFramework)' != 'net8.0'">Exe</OutputType>
 
         <!-- .NET MAUI -->
@@ -25,6 +24,9 @@
         <ApplicationId>com.companyname.samplemauiappcpm</ApplicationId>
         <ApplicationIdGuid>56eb2323-151d-4ba0-8154-a52c113ebdad</ApplicationIdGuid>
 
+        <!-- Required for C# Hot Reload -->
+        <UseInterpreter Condition="'$(Configuration)' == 'Debug'">True</UseInterpreter>
+
         <!-- Versions -->
         <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
         <ApplicationVersion>1</ApplicationVersion>
@@ -39,6 +41,19 @@
         <!-- Minimum Target OS Version for Windows Platform -->
         <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
     </PropertyGroup>
+
+    <ItemGroup Condition="$(TargetFramework.Contains('-windows'))">
+        <!-- Required? - WinUI does not yet have buildTransitive for everything -->
+        <PackageReference Include="Microsoft.Graphics.Win2D" />
+        <PackageReference Include="Microsoft.WindowsAppSDK" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\GrpcClient\GrpcClient.csproj" />
+        <ProjectReference Include="..\DataModel\DataModel.fsproj" />
+        <!-- because DataModel dep is an F# proj -->
+        <PackageReference Include="FSharp.Core" VersionOverride="8.0.101" />
+    </ItemGroup>
 
     <ItemGroup>
         <!-- App Icon -->
