@@ -92,5 +92,10 @@
         <Folder Include="Services\" />
         -->
     </ItemGroup>
-    
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+        <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk7" ExcludeAssets="build;buildTransitive" />
+        <PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" ExcludeAssets="build;buildTransitive" />
+    </ItemGroup>
+
 </Project>

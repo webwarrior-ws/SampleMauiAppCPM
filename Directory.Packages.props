@@ -24,6 +24,7 @@
         <PackageVersion Include="Shiny.Hosting.Maui" Version="3.0.0-alpha-0533" />
         <PackageVersion Include="Shiny.Push.FirebaseMessaging" Version="3.0.0-alpha-0533" />
         <PackageVersion Include="Shiny.Extensions.Configuration" Version="3.0.0-alpha-0533" />
-        
+        <PackageVersion Include="Xamarin.Kotlin.StdLib.Jdk7" Version="1.9.0.1" />
+        <PackageVersion Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.9.0.1" />
     </ItemGroup>
 </Project>
